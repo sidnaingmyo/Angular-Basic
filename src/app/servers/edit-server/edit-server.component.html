@@ -1,0 +1,16 @@
+<div *ngIf="allowEdit else notAllowed">
+<div class="form-group">
+  <label for="">Server Name</label>
+  <input type="text" class="form-control" [(ngModel)]="serverName"></div>
+<div class="form-group">
+  <label for="">Status</label>
+  <select name="" id="" class="custom-select" [(ngModel)]="serverStatus" )]>
+    <option value="OFFLINE">OFFLINE</option>
+    <option value="ONLINE">ONLINE</option>
+  </select>
+  </div>
+<button class="btn btn-outline-primary" (click)="upDateServer()">Update</button>
+</div>
+<ng-template #notAllowed>
+  <p class="text-danger ">This server is not allowed</p>
+</ng-template>
